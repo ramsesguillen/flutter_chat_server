@@ -73,7 +73,7 @@ const login = async( req, res = response ) => {
         // Generar jwt
         const token = await generarJWT( usuario.id );
 
-        res.status(201).json({
+        res.json({
             ok: true,
             usuario,
             token
